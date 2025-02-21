@@ -5,7 +5,7 @@ ruby '>= 3.1.0'
 
 gem 'propshaft'
 gem 'puma', '~> 6.3'
-gem 'rack', '~> 2.2.7'
+gem 'rack', '~> 2.2.11'
 gem 'rails', '~> 7.1.1'
 gem 'thor', '~> 1.2'
 
@@ -63,7 +63,7 @@ gem 'kaminari', '~> 1.2'
 gem 'link_header', '~> 0.0'
 gem 'mario-redis-lock', '~> 1.2', require: 'redis_lock'
 gem 'mime-types', '~> 3.5.0', require: 'mime/types/columnar'
-gem 'nokogiri', '~> 1.15'
+gem 'nokogiri', '~> 1.18', '>= 1.18.3'
 gem 'nsa'
 gem 'oj', '~> 3.14'
 gem 'ox', '~> 2.14'
@@ -167,9 +167,9 @@ group :development do
   # Code linting CLI and plugins
   gem 'rubocop', require: false
   gem 'rubocop-capybara', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop-performance', '>= 1.24.0', require: false
+  gem 'rubocop-rails', '>= 2.30.0', require: false
+  gem 'rubocop-rspec', '>= 3.5.0', require: false
   gem 'rubocop-rspec_rails', require: false
 
   # Annotates modules with schema
