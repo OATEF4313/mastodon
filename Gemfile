@@ -5,7 +5,7 @@ ruby '>= 3.1.0'
 
 gem 'propshaft'
 gem 'puma', '~> 6.3'
-gem 'rack', '~> 2.2.7'
+gem 'rack', '~> 2.2.13'
 gem 'rails', '~> 7.1.1'
 gem 'thor', '~> 1.2'
 
@@ -41,7 +41,7 @@ gem 'omniauth', '~> 2.0'
 gem 'omniauth-cas', '~> 3.0.0.beta.1'
 gem 'omniauth_openid_connect', '~> 0.6.1'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
-gem 'omniauth-saml', '~> 2.0'
+gem 'omniauth-saml', '~> 2.1', '>= 2.1.3'
 
 gem 'color_diff', '~> 0.1'
 gem 'csv', '~> 3.2'
@@ -166,11 +166,11 @@ end
 group :development do
   # Code linting CLI and plugins
   gem 'rubocop', require: false
-  gem 'rubocop-capybara', require: false
+  gem 'rubocop-capybara', '>= 2.22.0', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
-  gem 'rubocop-rspec_rails', require: false
+  gem 'rubocop-rspec_rails', '>= 2.31.0', require: false
 
   # Annotates modules with schema
   gem 'annotate', '~> 3.2'
