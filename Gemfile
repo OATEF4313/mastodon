@@ -3,11 +3,11 @@
 source 'https://rubygems.org'
 ruby '>= 3.1.0'
 
-gem 'propshaft'
+gem 'propshaft', '>= 0.9.1'
 gem 'puma', '~> 6.3'
 gem 'rack', '~> 2.2.7'
-gem 'rails', '~> 7.1.1'
-gem 'thor', '~> 1.2'
+gem 'rails', '~> 7.1.4'
+gem 'thor', '~> 1.4', '>= 1.4.0'
 
 gem 'dotenv'
 gem 'haml-rails', '~>2.0'
@@ -22,14 +22,14 @@ gem 'kt-paperclip', '~> 7.2'
 gem 'md-paperclip-azure', '~> 2.2', require: false
 gem 'ruby-vips', '~> 2.2', require: false
 
-gem 'active_model_serializers', '~> 0.10'
+gem 'active_model_serializers', '~> 0.10', '>= 0.10.15'
 gem 'addressable', '~> 2.8'
 gem 'bootsnap', '~> 1.18.0', require: false
 gem 'browser'
 gem 'charlock_holmes', '~> 0.7.7'
 gem 'chewy', '~> 7.3'
 gem 'devise', '~> 4.9'
-gem 'devise-two-factor'
+gem 'devise-two-factor', '>= 6.0.0'
 
 group :pam_authentication, optional: true do
   gem 'devise_pam_authenticatable2', '~> 9.2'
@@ -38,15 +38,15 @@ end
 gem 'net-ldap', '~> 0.18'
 
 gem 'omniauth', '~> 2.0'
-gem 'omniauth-cas', '~> 3.0.0.beta.1'
+gem 'omniauth-cas', '~> 3.0.1.0.0'
 gem 'omniauth_openid_connect', '~> 0.6.1'
-gem 'omniauth-rails_csrf_protection', '~> 1.0'
-gem 'omniauth-saml', '~> 2.0'
+gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.2'
+gem 'omniauth-saml', '~> 2.1', '>= 2.1.1'
 
 gem 'color_diff', '~> 0.1'
 gem 'csv', '~> 3.2'
 gem 'discard', '~> 1.2'
-gem 'doorkeeper', '~> 5.6'
+gem 'doorkeeper', '~> 5.7', '>= 5.7.0'
 gem 'ed25519', '~> 1.3'
 gem 'fast_blank', '~> 1.0'
 gem 'fastimage'
@@ -57,13 +57,13 @@ gem 'http_accept_language', '~> 2.1'
 gem 'httplog', '~> 1.7.0'
 gem 'i18n'
 gem 'idn-ruby', require: 'idn'
-gem 'inline_svg'
+gem 'inline_svg', '>= 1.10.0'
 gem 'irb', '~> 1.8'
 gem 'kaminari', '~> 1.2'
 gem 'link_header', '~> 0.0'
 gem 'mario-redis-lock', '~> 1.2', require: 'redis_lock'
 gem 'mime-types', '~> 3.5.0', require: 'mime/types/columnar'
-gem 'nokogiri', '~> 1.15'
+gem 'nokogiri', '~> 1.18', '>= 1.18.9'
 gem 'nsa'
 gem 'oj', '~> 3.14'
 gem 'ox', '~> 2.14'
@@ -73,18 +73,18 @@ gem 'public_suffix', '~> 6.0'
 gem 'pundit', '~> 2.3'
 gem 'rack-attack', '~> 6.6'
 gem 'rack-cors', '~> 2.0', require: 'rack/cors'
-gem 'rails-i18n', '~> 7.0'
+gem 'rails-i18n', '~> 7.0', '>= 7.0.10'
 gem 'redcarpet', '~> 3.6'
 gem 'redis', '~> 4.5', require: ['redis', 'redis/connection/hiredis']
 gem 'redis-namespace', '~> 1.10'
 gem 'rqrcode', '~> 2.2'
 gem 'ruby-progressbar', '~> 1.13'
-gem 'sanitize', '~> 6.0'
-gem 'scenic', '~> 1.7'
+gem 'sanitize', '~> 6.1', '>= 6.1.2'
+gem 'scenic', '~> 1.9', '>= 1.9.0'
 gem 'sidekiq', '~> 6.5'
 gem 'sidekiq-bulk', '~> 0.2.0'
 gem 'sidekiq-scheduler', '~> 5.0'
-gem 'sidekiq-unique-jobs', '~> 7.1'
+gem 'sidekiq-unique-jobs', '~> 8.0', '>= 8.0.0'
 gem 'simple_form', '~> 5.2'
 gem 'simple-navigation', '~> 4.4'
 gem 'stoplight', '~> 4.1'
@@ -122,7 +122,7 @@ end
 
 group :test do
   # Enable usage of all available CPUs/cores during spec runs
-  gem 'flatware-rspec'
+  gem 'flatware-rspec', '>= 2.3.3'
 
   # Adds RSpec Error/Warning annotations to GitHub PRs on the Files tab
   gem 'rspec-github', '~> 2.4', require: false
@@ -185,13 +185,13 @@ group :development do
 
   # Security analysis CLI tools
   gem 'brakeman', '~> 6.0', require: false
-  gem 'bundler-audit', '~> 0.9', require: false
+  gem 'bundler-audit', '~> 0.9', '>= 0.9.2', require: false
 
   # Linter CLI for HAML files
-  gem 'haml_lint', require: false
+  gem 'haml_lint', '>= 0.59.0', require: false
 
   # Validate missing i18n keys
-  gem 'i18n-tasks', '~> 1.0', require: false
+  gem 'i18n-tasks', '~> 1.0', '>= 1.0.15', require: false
 end
 
 group :development, :test do
@@ -211,7 +211,7 @@ group :development, :test do
   gem 'test-prof'
 
   # RSpec runner for rails
-  gem 'rspec-rails', '~> 6.0'
+  gem 'rspec-rails', '~> 6.1', '>= 6.1.4'
 end
 
 group :production do
